@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+    <div class="container">
+        <div class="p-3 mb-2 bg-success text-white text-center" style="border-radius: 20px;">NewsPip. {{title}}</div>
+    </div>
+
+    {% for xxx in data.articles %}
+
+        <div class="card m-3 float-left " style="width: 20rem; height: 25rem;">
+            <img src="{{ xxx.urlToImage }}" class="card-img-top img-responsive" alt="{{ xxx.title }}" style="height: 151.18112140865px;">
+            <div class="card-body">
+                <h5 class="card-title">{{ xxx.source.name }}</h5>
+                <p class="card-text " style="height: 70px; overflow: hidden; white-space: normal; text-overflow: ellipsis;">{{ xxx.description }}</p>
+                <a href="{{ xxx.url }}" class=" btn btn-outline-primary">Read article</a>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Published at: {{ xxx.publishedAt }}</small>
+            </div>
+        </div>        
+        
+    {% endfor %}
+     
+{% endblock %}
