@@ -12,7 +12,7 @@ Api_Key = os.getenv("API_KEY")
 @app.route('/')
 @app.route('/home')
 def home():
-    url = ('https://newsapi.org/v2/top-headlines?country=us&apiKey='+Api_Key+'')
+    url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey='+Api_Key+''
     response = requests.get(url)   
     data = response.json()
     title = 'Top Articles around the world.'
@@ -24,7 +24,7 @@ def about():
 
 @app.route('/cnn')
 def cnn():
-    url = ('http://newsapi.org/v2/top-headlines?''sources=cnn&''apiKey='+Api_Key+'') 
+    url = 'http://newsapi.org/v2/top-headlines?''sources=cnn&''apiKey='+Api_Key+''
     response = requests.get(url)
     data = response.json()
     title = 'Top Articles on CNN.'
@@ -32,7 +32,7 @@ def cnn():
 
 @app.route('/foxnews')
 def foxnews():
-    url = ('http://newsapi.org/v2/top-headlines?''sources=fox-news&''apiKey='+Api_Key+'')  
+    url = 'http://newsapi.org/v2/top-headlines?''sources=fox-news&''apiKey='+Api_Key+'' 
     response = requests.get(url)
     data = response.json()
     title = 'Top Articles on Fox News'
@@ -40,7 +40,7 @@ def foxnews():
 
 @app.route('/ustoday')
 def ustoday():
-    url = ('http://newsapi.org/v2/top-headlines?''sources=usa-today&''apiKey='+Api_Key+'')    
+    url = 'http://newsapi.org/v2/top-headlines?''sources=usa-today&''apiKey='+Api_Key+''    
     response = requests.get(url)
     data = response.json()
     title = 'Top Articles on USA Today'
@@ -48,7 +48,7 @@ def ustoday():
 
 @app.route('/cbsnews')
 def cbsnews():
-    url = ('http://newsapi.org/v2/top-headlines?''sources=cbs-news&''apiKey='+Api_Key+'')    
+    url = 'http://newsapi.org/v2/top-headlines?''sources=cbs-news&''apiKey='+Api_Key+''   
     response = requests.get(url)
     data = response.json()
     title = 'Top Articles on CBS News'
@@ -56,7 +56,7 @@ def cbsnews():
 
 @app.route('/theverge')
 def theverge():
-    url = ('http://newsapi.org/v2/top-headlines?''sources=the-verge&''apiKey='+Api_Key+'')   
+    url = 'http://newsapi.org/v2/top-headlines?''sources=the-verge&''apiKey='+Api_Key+''   
     response = requests.get(url)
     data = response.json()
     title = 'Top Articles on The Verge'
@@ -64,7 +64,7 @@ def theverge():
 
 @app.route('/cnbc')
 def cnbc():
-    url = ('http://newsapi.org/v2/top-headlines?''sources=cnbc&''apiKey='+Api_Key+'')   
+    url = 'http://newsapi.org/v2/top-headlines?''sources=cnbc&''apiKey='+Api_Key+''   
     response = requests.get(url)
     data = response.json()
     title = 'Top Articles on CNBC'
@@ -72,7 +72,7 @@ def cnbc():
 
 @app.route('/bitcoin')
 def bitcoin():
-    url = ('https://newsapi.org/v2/everything?q=bitcoin&apiKey='+Api_Key+'')    
+    url = 'https://newsapi.org/v2/everything?q=bitcoin&apiKey='+Api_Key+''    
     response = requests.get(url)
     data = response.json()
     title = 'Top Articles on Bitcoin'
@@ -80,7 +80,7 @@ def bitcoin():
 
 @app.route('/trump')
 def trump():
-    url = ('https://newsapi.org/v2/top-headlines?q=trump&apiKey='+Api_Key+'')   
+    url = 'https://newsapi.org/v2/top-headlines?q=trump&apiKey='+Api_Key+''   
     response = requests.get(url)
     data = response.json()
     title = 'Top Articles on Trump'
