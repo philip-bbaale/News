@@ -12,8 +12,7 @@ Api_Key = os.getenv("API_KEY")
 @app.route('/')
 @app.route('/home')
 def home():
-    """This is the DocStrings"""
-    url = ('http://newsapi.org/v2/top-headlines?''country=us&''apiKey='+Api_Key+'') 
+    url = ('https://newsapi.org/v2/top-headlines?country=us&apiKey='+Api_Key+'') 
     response = requests.get(url)   
     data = response.json()
     title = 'Top Articles around the world.'
